@@ -1,18 +1,16 @@
-buildscript {
-    ext {   //전역변수 설정
-        springBootVersion = '2.7.9'
+buildscript{
+    ext {
+        springBootVersion = '2.7.9'     //스프링부트 버전 수정
     }
-    repositories {
+    repositories{
         mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-
 }
 
-
-plugins {
+plugins{
     id 'java'
     id 'org.springframework.boot' version '2.7.9'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
@@ -20,7 +18,7 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-sourceCompatibility = 17
+sourceCompatibility = 17        //사용할 java version
 
 repositories {
     mavenCentral()
@@ -28,5 +26,10 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.h2database:h2'
+    implementation 'org.projectlombok:lombok'
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'junit:junit:4.13.1'
 }
