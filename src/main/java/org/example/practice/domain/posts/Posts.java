@@ -3,13 +3,14 @@ package org.example.practice.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.practice.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor      //기본생성자 public Posts(){} 자동 추가
 @Entity     //테이블과 링크될 클래스임
-public class Posts extends BaseTimeEntity{
+public class Posts extends BaseTimeEntity {
 
     @Id         //해당 테이블의 primary key field
     @GeneratedValue(strategy = GenerationType.IDENTITY)     //primary key의 생성규칙; GenerationType.IDENTITY -> auto-increment

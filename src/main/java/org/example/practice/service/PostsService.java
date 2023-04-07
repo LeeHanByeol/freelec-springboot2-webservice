@@ -1,4 +1,4 @@
-package org.example.practice.service.posts;
+package org.example.practice.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.practice.domain.posts.Posts;
@@ -36,6 +36,7 @@ public class PostsService {
         postsRepository.delete(posts);
     }
 
+	@Transactional(readOnly = true)							   
     public PostsResponseDto findById(Long id) {
         Posts entity = postsRepository.findById(id).orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
 

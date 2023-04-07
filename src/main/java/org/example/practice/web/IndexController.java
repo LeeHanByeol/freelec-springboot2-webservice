@@ -1,7 +1,9 @@
 package org.example.practice.web;
 
 import lombok.RequiredArgsConstructor;
-import org.example.practice.service.posts.PostsService;
+import org.example.practice.config.auth.LoginUser;
+import org.example.practice.config.auth.dto.SessionUser;
+import org.example.practice.service.PostsService;
 import org.example.practice.web.dto.PostsResponseDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +16,13 @@ public class IndexController {
 
     private final PostsService postsService;
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
+
+        if(user != null){
+            model.addAttribute("userName", user.getName());
+        }
+
         return "index";
     }
 
@@ -31,4 +38,5 @@ public class IndexController {
 
         return "posts-update";
     }
+
 }

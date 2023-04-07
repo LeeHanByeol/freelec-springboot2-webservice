@@ -1,7 +1,7 @@
 package org.example.practice.web;
 
 import lombok.RequiredArgsConstructor;
-import org.example.practice.service.posts.PostsService;
+import org.example.practice.service.PostsService;
 import org.example.practice.web.dto.PostsResponseDto;
 import org.example.practice.web.dto.PostsSaveRequestDto;
 import org.example.practice.web.dto.PostsUpdateRequestDto;
