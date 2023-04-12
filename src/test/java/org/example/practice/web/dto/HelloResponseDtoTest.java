@@ -1,11 +1,10 @@
 package org.example.practice.web.dto;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class HelloResponseDtoTest extends TestCase {
+public class HelloResponseDtoTest {
 
     @Test
     public void lombok_func_test(){
