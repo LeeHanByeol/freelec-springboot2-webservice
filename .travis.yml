@@ -12,7 +12,7 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradle clean build"
+script: "./gradlew clean build"
 
 before_install:
   - chmod +x gradlew
