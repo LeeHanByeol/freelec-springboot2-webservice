@@ -12,6 +12,7 @@ import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PostsRepositoryTest {
