@@ -37,7 +37,7 @@ dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     implementation('org.springframework.session:spring-session-jdbc')
 
-    implementation("org.mariadb.jdbc:mariadb-java-clinet")
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'junit:junit:4.13.1'
